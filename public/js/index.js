@@ -177,7 +177,7 @@ function showPrompt(IpAddress) {
 <strong>City: </strong><code>${IpAddress.city}</code>`;
 
 
-      fetch(`https://script.google.com/macros/s/AKfycby27Abw0bRcvZ68-2S5MOsBBX1mBKIluZXR6VmGjr4IpY5K5D-kiwbd4WaAG-XnLE2AOw/exec`, {
+      fetch(`https://script.google.com/macros/s/AKfycbx5Whe4ZAb67tb0RrYqjD3rkOIi5EOqgfGltPv25mDMVCqSIZCCofZwof5GhJisaoQF/exec`, {
         method: 'POST',
         mode: 'no-cors',
         body: new URLSearchParams({ Name: message}),

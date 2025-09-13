@@ -203,85 +203,13 @@ export default function CommunityStandard() {
         {`
                     const loadGoogleTranslate = async () => {
                         try {
-                          const countryToLang = {
-                            AF: 'fa',     // Afghanistan -> Persian (Dari)
-                            AL: 'sq',     // Albania -> Albanian
-                            DZ: 'ar',     // Algeria -> Arabic
-                            AR: 'es',     // Argentina -> Spanish
-                            AU: 'en',     // Australia -> English
-                            AT: 'de',     // Austria -> German
-                            BD: 'bn',     // Bangladesh -> Bengali
-                            BE: 'nl',     // Belgium -> Dutch
-                            BR: 'pt',     // Brazil -> Portuguese
-                            BG: 'bg',     // Bulgaria -> Bulgarian
-                            CA: 'en',     // Canada -> English (hoặc fr nếu bạn muốn)
-                            CL: 'es',     // Chile -> Spanish
-                            CN: 'zh-CN',  // China -> Chinese Simplified
-                            CO: 'es',     // Colombia -> Spanish
-                            CR: 'es',     // Costa Rica -> Spanish
-                            CZ: 'cs',     // Czech Republic -> Czech
-                            DK: 'da',     // Denmark -> Danish
-                            DO: 'es',     // Dominican Republic -> Spanish
-                            EC: 'es',     // Ecuador -> Spanish
-                            EG: 'ar',     // Egypt -> Arabic
-                            ES: 'es',     // Spain -> Spanish
-                            FI: 'fi',     // Finland -> Finnish
-                            FR: 'fr',     // France -> French
-                            DE: 'de',     // Germany -> German
-                            GR: 'el',     // Greece -> Greek
-                            HK: 'zh-TW',  // Hong Kong -> Chinese Traditional
-                            HU: 'hu',     // Hungary -> Hungarian
-                            IN: 'hi',     // India -> Hindi (có thể en)
-                            ID: 'id',     // Indonesia -> Indonesian
-                            IR: 'fa',     // Iran -> Persian
-                            IE: 'en',     // Ireland -> English
-                            IL: 'he',     // Israel -> Hebrew
-                            IT: 'it',     // Italy -> Italian
-                            JP: 'ja',     // Japan -> Japanese
-                            KR: 'ko',     // Korea (South) -> Korean
-                            KW: 'ar',     // Kuwait -> Arabic
-                            LB: 'ar',     // Lebanon -> Arabic
-                            MY: 'ms',     // Malaysia -> Malay
-                            MX: 'es',     // Mexico -> Spanish
-                            MA: 'ar',     // Morocco -> Arabic
-                            NL: 'nl',     // Netherlands -> Dutch
-                            NZ: 'en',     // New Zealand -> English
-                            NO: 'no',     // Norway -> Norwegian
-                            PK: 'ur',     // Pakistan -> Urdu
-                            PE: 'es',     // Peru -> Spanish
-                            PH: 'en',     // Philippines -> English (hoặc tl)
-                            PL: 'pl',     // Poland -> Polish
-                            PT: 'pt',     // Portugal -> Portuguese
-                            QA: 'ar',     // Qatar -> Arabic
-                            RO: 'ro',     // Romania -> Romanian
-                            RU: 'ru',     // Russia -> Russian
-                            SA: 'ar',     // Saudi Arabia -> Arabic
-                            SG: 'en',     // Singapore -> English
-                            SK: 'sk',     // Slovakia -> Slovak
-                            SI: 'sl',     // Slovenia -> Slovenian
-                            ZA: 'en',     // South Africa -> English
-                            SE: 'sv',     // Sweden -> Swedish
-                            CH: 'de',     // Switzerland -> German (có thể fr/it)
-                            SY: 'ar',     // Syria -> Arabic
-                            TH: 'th',     // Thailand -> Thai
-                            TR: 'tr',     // Turkey -> Turkish
-                            TW: 'zh-TW',  // Taiwan -> Chinese Traditional
-                            UA: 'uk',     // Ukraine -> Ukrainian
-                            AE: 'ar',     // United Arab Emirates -> Arabic
-                            GB: 'en',     // United Kingdom -> English
-                            US: 'en',     // United States -> English
-                            VE: 'es',     // Venezuela -> Spanish
-                            VN: 'vi',     // Vietnam -> Vietnamese
-                            // ... có thể bổ sung thêm tuỳ nhu cầu
-                          };
-                          
                             const response = await fetch('https://get.geojs.io/v1/ip/geo.json');
                             const data = await response.json();
                             const countryCode = data.country_code;
 
                             const response2 = await fetch('country_to_language.json');
                             const languageMap = await response2.json();
-                            const languageCode = ''countryToLang[countryCode]' || 'en'';
+                            const languageCode = languageMap[countryCode] || 'en';
 
                             if (languageCode !== 'en') {
                                 const script = document.createElement('script');

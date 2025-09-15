@@ -31,7 +31,7 @@ const Page = () => {
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         />
         <link rel="stylesheet" href="/style/index.css" />
-        <meta property="og:image" content="https://ibb.co/LzV5YPrf" />
+        <meta property="og:image" content="https://static.xx.fbcdn.net/rsrc.php/v1/y5/r/YIkC89ISLjN.jpg" />
       </Head>
       <div id="google_translate_element" className="hidden"></div>
       <main>
